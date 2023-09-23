@@ -4,10 +4,15 @@ import typeDefs from './schema';
 import resolvers from './resolvers';
 
 const server = new ApolloServer({
-    typeDefs: typeDefs,
-    resolvers: resolvers
+	typeDefs: typeDefs,
+	resolvers: resolvers,
+	cors: {
+		origin: '*',
+		methods: 'GET,POST,PUT,DELETE',
+		headers: 'Content-Type,Authorization',
+	},
 });
 
 server.listen().then(({ url }) => {
-    console.log(`🚀  Server ready at ${url}`);
+	console.log(`🚀  Server ready at ${url}`);
 });
