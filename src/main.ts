@@ -8,8 +8,8 @@ const server = new ApolloServer({
 	resolvers: resolvers,
 	cors: {
 		origin: '*',
-		methods: 'GET,POST,PUT,DELETE',
-		headers: 'Content-Type,Authorization',
+		methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+		allowedHeaders: 'Content-Type,Authorization',
 	},
 });
 
