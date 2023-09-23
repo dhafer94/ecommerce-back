@@ -7,10 +7,7 @@ const server = new ApolloServer({
 	typeDefs: typeDefs,
 	resolvers: resolvers,
 	cors: {
-		origin: [
-			'https://e-commerce-deployment.netlify.app',
-			'http://localhost:3000',
-		],
+		origin: ['https://e-commerce-back.netlify.app', 'http://localhost:3000'],
 		methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
 		allowedHeaders: ['Content-Type', 'Authorization'],
 	},
